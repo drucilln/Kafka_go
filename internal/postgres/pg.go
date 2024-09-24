@@ -1,18 +1,14 @@
 package postgres
 
 import (
+	"Kafka_go/internal/cache"
+	"Kafka_go/internal/model"
 	"fmt"
 	_ "github.com/lib/pq"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
-	"untitled_folder/internal/cache"
-	"untitled_folder/internal/model"
 )
-
-//type DB struct {
-//	*gorm.DB
-//}
 
 func InitDB() (*gorm.DB, error) {
 	connStr := "host=localhost user=polaykov.art dbname=wb-orders sslmode=disable"

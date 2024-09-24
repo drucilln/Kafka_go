@@ -1,8 +1,8 @@
 package cache
 
 import (
+	"Kafka_go/internal/model"
 	"sync"
-	"untitled_folder/internal/model"
 )
 
 type Cache struct {

@@ -1,6 +1,8 @@
-package nats
+package kafka
 
 import (
+	"Kafka_go/internal/cache"
+	"Kafka_go/internal/model"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -10,8 +12,6 @@ import (
 	"gorm.io/gorm"
 	"log"
 	"path/filepath"
-	"untitled_folder/internal/cache"
-	"untitled_folder/internal/model"
 )
 
 func InitKafka(c *cache.Cache, db *gorm.DB) {
@@ -30,7 +30,7 @@ func handleMsg(r *kafka.Reader, c *cache.Cache, db *gorm.DB) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	absPath, err := filepath.Abs("../../L0/schema.json")
+	absPath, err := filepath.Abs("../../internal/model/schema.json")
 	if err != nil {
 		log.Fatal(err)
 	}

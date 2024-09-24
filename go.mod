@@ -1,4 +1,4 @@
-module untitled_folder
+module Kafka_go
 
 go 1.21.0
 

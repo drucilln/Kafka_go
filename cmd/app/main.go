@@ -1,13 +1,13 @@
 package main
 
 import (
+	"Kafka_go/internal/cache"
+	"Kafka_go/internal/handler"
+	"Kafka_go/internal/kafka"
+	"Kafka_go/internal/postgres"
 	"fmt"
 	"log"
 	"net/http"
-	"untitled_folder/internal/cache"
-	"untitled_folder/internal/handler"
-	"untitled_folder/internal/nats"
-	"untitled_folder/internal/postgres"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 		log.Fatalf("Error loading cache from DB: %v", err)
 	}
 	//fmt.Println(c.Orders)
-	go nats.InitKafka(c, db)
+	go kafka.InitKafka(c, db)
 	http.HandleFunc("/order", handler.GetOrderHandler(c))
 
 	fmt.Println("Listening on port 8080")
