@@ -1,0 +1,62 @@
+{
+  "order_uid": "a1b2c3d4e5f6g7h8i9j0",
+  "track_number": "TRACKNUM123456789",
+  "entry": "WBIL",
+  "delivery": {
+    "name": "Иван Иванов",
+    "phone": "+79991234567",
+    "zip": "123456",
+    "city": "Москва",
+    "address": "Улица Пушкина, дом Колотушкина",
+    "region": "Московская область",
+    "email": "ivanov@example.com"
+  },
+  "payment": {
+    "transaction": "a1b2c3d4e5f6g7h8i9j0",
+    "request_id": "",
+    "currency": "RUB",
+    "provider": "sberbank",
+    "amount": 15000,
+    "payment_dt": 1638000000,
+    "bank": "Сбербанк",
+    "delivery_cost": 500,
+    "goods_total": 14500,
+    "custom_fee": 0
+  },
+  "items": [
+    {
+      "chrt_id": 1111111,
+      "track_number": "TRACKNUM123456789",
+      "price": 7500,
+      "rid": "itemrid123",
+      "name": "Ноутбук",
+      "sale": 0,
+      "size": "15 дюймов",
+      "total_price": 7500,
+      "nm_id": 2222222,
+      "brand": "BrandA",
+      "status": 201
+    },
+    {
+      "chrt_id": 3333333,
+      "track_number": "TRACKNUM123456789",
+      "price": 7000,
+      "rid": "itemrid456",
+      "name": "Смартфон",
+      "sale": 0,
+      "size": "6 дюймов",
+      "total_price": 7000,
+      "nm_id": 4444444,
+      "brand": "BrandB",
+      "status": 201
+    }
+  ],
+  "locale": "ru",
+  "internal_signature": "",
+  "customer_id": "customer123",
+  "delivery_service": "courier",
+  "shardkey": "10",
+  "sm_id": 1,
+  "date_created": "2021-11-28T10:00:00Z",
+  "oof_shard": "2"
+}
